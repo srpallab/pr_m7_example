@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>CSS Transform and Transition Example.</title>
+    <style>
+     .field {
+       border: 1px solid;
+     }
+     .field:hover .bat{
+       transform: rotate(-45deg);
+       transform-origin: top right;
+     }
+     .field:hover .ball{
+       transform: translate(900px, -160px);
+     }
+     .bat {
+       height: 600px;
+       width: 600px;
+       transition: transform 1s ease-in;
+     }
+     .ball {
+       width: 40px;
+       height: 40px;
+       border-radius: 20px;
+       background-color: red;
+       position: relative;
+       left: 610px;
+       top: -40px;
+       transition: transform 1s ease-out 1s;
+     }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Transform and Transition Example.</h1>
+    <div class="field">
+      <img class="bat" alt="" src="images/bat.png"/>
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
